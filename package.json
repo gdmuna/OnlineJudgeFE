@@ -5,10 +5,10 @@
   "author": "zemal <rawidn@163.com>",
   "private": true,
   "scripts": {
-    "dev": "set NODE_ENV=development && set TARGET=https://acm.gdmuna.com/ && node build/dev-server.js",
+    "dev": "set NODE_ENV=development && set TARGET=https://oj.acm.gdmuna.com/ && node build/dev-server.js",
     "start": "npm run dev",
-    "build": "node build/build.js",
-    "build:dll": "webpack --config=build/webpack.dll.conf.js",
+    "build": "set TARGET=https://oj.acm.gdmuna.com/ && node build/build.js",
+    "build:dll": "set TARGET=https://oj.acm.gdmuna.com/ && webpack --config=build/webpack.dll.conf.js",
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
